@@ -10,17 +10,21 @@ Create a virtual environment
 
 Install Python dependancies:
 
-python3 -m pip install torch
+- python3 -m pip install torch
 
-python3 -m pip install numpy
+- python3 -m pip install numpy
+- python3 -m pip install pygame
 
-python3 -m pip install matplotlib
+- python3 -m pip install matplotlib
 
 note: under Ubuntu 22.02, for some reasons, you have to install these packages in order to visualize with matplotlib
 
-python3 -m pip install PyQt5 
+- python3 -m pip install PyQt5 
 
-python3 -m pip install "cython<3" 
+- python3 -m pip install "cython<3" 
+
+Execute the application (PPO):
+- python3 06-
 
 
 # Notes

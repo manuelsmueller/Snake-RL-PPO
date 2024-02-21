@@ -37,7 +37,7 @@ if __name__ == '__main__':
     plot_mean_scores = []
     total_score = 0
     record = 0
-    max_i = 10
+    max_i = 130
 
     while True:
 
