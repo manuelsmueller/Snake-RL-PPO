@@ -1,19 +1,25 @@
 # Introduction: Teach AI To Play Snake! Reinforcement Learning With PyTorch and Pygame
 
-# todo
+todo
 
 # Setup
 
-# Create a virtual environment
-python3 -m virtualenv venv
-source venv/bin/activate
+Create a virtual environment
+- python3 -m virtualenv venv
+- source venv/bin/activate
 
-# Install Python dependancies 
+Install Python dependancies:
+
 python3 -m pip install torch
+
 python3 -m pip install numpy
+
 python3 -m pip install matplotlib
-# note: under Ubuntu 22.02, for some reasons, you have to install these packages in order to visualize with matplotlib
+
+note: under Ubuntu 22.02, for some reasons, you have to install these packages in order to visualize with matplotlib
+
 python3 -m pip install PyQt5 
+
 python3 -m pip install "cython<3" 
 
 
