@@ -142,15 +142,10 @@ def train(env:SnakeGameAI2, policy: ActorCritic, optimizer, discount_factor:floa
         action = dist.sample()
 
         log_prob_action = dist.log_prob(action)
-
-        # print("action.item()", action.item())
-        
+      
         # apply the action to the environment and simulate the result.
         # interface is: state, reward and (done, truncated)=(game over,abbort)
         state, reward, done,truncated, info = env.step(action.item())
-
-        # if reward < 0:
-        #     print("encountered negative reward", reward)
 
         # store results in a list
         actions.append(action)
@@ -188,7 +183,12 @@ def calculate_returns(rewards, discount_factor, normalize = True):
     returns = torch.tensor(returns)
     
     if normalize:
-        returns = (returns - returns.mean()) / returns.std()
+        ref = returns.std()
+        # edge case management.
+        if ref == 0:
+            ref = 1
+            print("W: instability@calculate_returns. returns.std() is 0. Changing ref to 1.")
+        returns = (returns - returns.mean()) / ref
         
     return returns
 
@@ -197,7 +197,12 @@ def calculate_advantages(returns, values, normalize = True):
     advantages = returns - values
     
     if normalize:
-        advantages = (advantages - advantages.mean()) / advantages.std()
+        ref = advantages.std()
+        # edge case management.
+        if ref == 0:
+            ref = 1
+            print("W: Instability@calculate_advantages. advantages.std() is 0. Changing ref to 1.")
+        advantages = (advantages - advantages.mean()) / ref
         
     return advantages
 
