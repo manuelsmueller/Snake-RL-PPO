@@ -32,6 +32,6 @@ Execute the application (PPO):
 - Danger of numeric instability if the rewards barely change (devision by 0).
 
 # References
-This is a combination of two tutorials by XXX (ref. https://www.youtube.com/playlist?list=PLqnslRFeH2UrDh7vUmJ60YrmWd64mTTKV) introducing the pygame environment and training with Deep Q Learning,
-and YYY providing a guide through various reinforcement learning algorihtms (ref. ZZZZ)
+This is a combination of two tutorials by Patrick Loeber (ref. https://www.youtube.com/playlist?list=PLqnslRFeH2UrDh7vUmJ60YrmWd64mTTKV, https://github.com/patrickloeber/snake-ai-pytorch/tree/main) introducing the pygame environment and training with Deep Q Learning,
+and Ben Trevett providing a guide through various reinforcement learning algorihtms (ref. https://github.com/bentrevett/pytorch-rl )https://github.com/bentrevett/pytorch-rl )
 
